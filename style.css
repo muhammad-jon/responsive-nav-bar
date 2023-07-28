@@ -38,10 +38,6 @@ a {
   margin: 0 auto;
 }
 
-body {
-  overflow: hidden;
-}
-
 header {
   padding-top: 50px;
   background: url("./assets/images/Subtract.svg"), url("./assets/images/Subtract1.svg"), linear-gradient(-185deg, #172755 0 80%, red 80% 81%, transparent 81% 100%);
@@ -84,7 +80,75 @@ header nav ul .sign-up {
   border: 1px solid #465b95;
 }
 
+.features {
+  text-align: center;
+}
+.features .container h1 {
+  font-size: 40px;
+}
+.features .container > p {
+  font-size: 18px;
+  color: #8794ba;
+  margin-top: 30px;
+  margin-bottom: 81px;
+}
+.features .our_features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  text-align: center;
+}
+.features .our_features__card:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.features .our_features__card:nth-child(2) {
+  grid-column: 3/4;
+  grid-row: 1/5;
+}
+.features .our_features__card:nth-child(3) {
+  grid-column: 1/4;
+  grid-row: 5/6;
+}
+.features .our_features__card {
+  border: 1px solid red;
+}
+.features .our_features__card h3 {
+  font-size: 16px;
+  margin-top: 26px;
+  margin-bottom: 15px;
+}
+.features .our_features__card p {
+  font-size: 16px;
+  color: #8794ba;
+  line-height: 140%;
+}
+
+@media screen and (max-width: 884px) {
+  .features .container {
+    padding: 1rem;
+  }
+  .features .our_features {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .features .our_features__card:nth-child(1) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .features .our_features__card:nth-child(2) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .features .our_features__card:nth-child(3) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
   header .overlay-menu-switch {
     position: absolute;
     top: 0;
@@ -131,5 +195,38 @@ header nav ul .sign-up {
   }
   header nav ul .sign-up {
     display: none;
+  }
+  .features {
+    text-align: center;
+  }
+  .features .container h1 {
+    font-size: 40px;
+  }
+  .features .container > p {
+    font-size: 18px;
+    color: #8794ba;
+    margin-top: 30px;
+    margin-bottom: 81px;
+  }
+  .features .our_features {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    text-align: center;
+  }
+  .features .our_features__card {
+    align-items: flex-start;
+    display: flex;
+    border: none;
+    text-align: left;
+    gap: 28.5px;
+  }
+  .features .our_features__card h3 {
+    margin-bottom: 9px;
+    margin-top: 0;
+  }
+  .features .our_features__card p {
+    font-size: 14px;
   }
 }/*# sourceMappingURL=style.css.map */
