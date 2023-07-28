@@ -1,0 +1,109 @@
+@use "./assets/styles/fonts";
+@use "./assets/styles/global";
+body {
+  overflow: hidden;
+}
+header {
+  padding-top: 50px;
+  background: url("./assets/images/Subtract.svg"),
+    url("./assets/images/Subtract1.svg"),
+    linear-gradient(-185deg, #172755 0 80%, red 80% 81%, transparent 81% 100%);
+
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  height: 80vh;
+  #menu-switch {
+    display: none;
+  }
+  nav {
+    a {
+      color: #8794ba;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & > div {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 81px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 36px;
+      label {
+        display: none;
+      }
+      .sign-up {
+        border-radius: 68px;
+        padding: 10px 53px;
+        border: 1px solid #465b95;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .overlay-menu-switch {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      z-index: 9;
+    }
+    nav {
+      position: relative;
+    }
+    .nav-bar {
+      position: absolute;
+      transform: translate(110%);
+      transition: all 1s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      position: absolute;
+      width: 200px;
+      height: 250px;
+      padding: 1rem;
+      top: 6vh;
+      right: 0;
+      border-radius: 1rem;
+      background-color: #172755;
+      box-shadow: 3px 3px 10px #465b95;
+      z-index: 10;
+    }
+
+    #menu-switch:checked + nav .nav-bar {
+      transform: translate(0);
+    }
+    #menu-switch:checked + nav + label {
+      display: block;
+    }
+    nav {
+      & > div {
+        img {
+          margin-right: 0;
+        }
+      }
+      ul {
+        label {
+          display: block;
+          z-index: 11;
+        }
+        .sign-up {
+          display: none;
+        }
+      }
+    }
+  }
+}
