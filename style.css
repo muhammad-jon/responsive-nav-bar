@@ -38,6 +38,10 @@ a {
   margin: 0 auto;
 }
 
+.navbar.navbar-expand-lg.bg-body-tertiary {
+  background-color: transparent !important;
+}
+
 header {
   padding-top: 50px;
   background: url("./assets/images/Subtract.svg"), url("./assets/images/Subtract1.svg"), linear-gradient(-185deg, #172755 0 80%, red 80% 81%, transparent 81% 100%);
